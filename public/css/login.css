@@ -1,0 +1,35 @@
+#welcome {
+  color: white;
+  font-size: 2rem;
+  display: flex;
+}
+
+#login-form {
+  margin-left: 10px;
+}
+
+#login-form span {
+  font-size: 2rem;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  outline: none;
+  user-select: all;
+  display: inline-block;
+}
+
+#login-form span:focus,
+#login-form span:hover {
+  text-decoration: underline;
+}
+
+#login-form span:empty::before {
+  content: attr(placeholder);
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#login-form span:not(:empty):not(:focus)::after {
+  content: '!';
+}

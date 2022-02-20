@@ -1,15 +1,17 @@
 (() => {
   const loginForm = document.querySelector('#login-form');
-  const loginInput = loginForm.querySelector('input');
+  const loginInput = loginForm.querySelector('span');
   const greeting = document.querySelector('#greeting');
   const todoForm = document.querySelector('#todo-form');
   const LOGIN_KEY = 'username';
   let currentUsername = '';
 
+  checkIfLogin();
+
   function login(username) {
     greeting.hidden = false;
     todoForm.hidden = false;
-    loginInput.value = username;
+    loginInput.textContent = username;
     currentUsername = username;
     localStorage.setItem(LOGIN_KEY, username);
   }
@@ -19,16 +21,20 @@
     if (username) login(username);
   }
 
-  checkIfLogin();
-
-  loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const { value: username } = loginInput;
-    if (username) login(username);
-    loginInput.blur();
+  loginInput.addEventListener('keypress', (event) => {
+    const { isComposing, key } = event;
+    if (isComposing) return;
+    if (key === 'Enter') {
+      event.preventDefault();
+      const { textContent: username } = loginInput;
+      if (username) login(username);
+      loginInput.blur();
+    }
   });
 
   loginInput.addEventListener('blur', () => {
-    loginInput.value = currentUsername;
+    const { textContent: username } = loginInput;
+    if (username) login(username);
+    else loginInput.textContent = currentUsername;
   });
 })();
