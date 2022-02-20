@@ -12,11 +12,19 @@
   <body>
     <div class="overlay"></div>
     <main id="center">
-      <h1 id="realtime-clock">00:00</h1>
-      <h2 id="greeting" hidden>Welcome, </h2>
-      <form id="login-form">
-        <input type="text" placeholder="What is your name?" />
-      </form>
+      <h1 id="realtime-clock">
+        <span class="hours">00</span>
+        <span class="divider">:</span>
+        <span class="minutes">00</span>
+        <span class="divider">:</span>
+        <span class="seconds">00</span>
+      </h1>
+      <div id="welcome">
+        <h3 id="greeting" hidden>Welcome, </h3>
+        <form id="login-form">
+          <input type="text" placeholder="What is your name?" />
+        </form>
+      </div>
       <form id="todo-form" hidden>
         <input type="text" placeholder="Write a To Do here." />
       </form>

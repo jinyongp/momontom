@@ -1,0 +1,26 @@
+#realtime-clock {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#realtime-clock .hours,
+#realtime-clock .minutes,
+#realtime-clock .divider:nth-child(2) {
+  font-size: 12rem;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+#realtime-clock .seconds {
+  width: 6rem;
+}
+
+#realtime-clock .seconds,
+#realtime-clock .divider:nth-child(4) {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
