@@ -8,4 +8,5 @@ Learning Vanilla JS by cloning [Momentum](https://chrome.google.com/webstore/det
 - [x] Login (localStorage)
 - [x] To-do List (localStorage)
 - [x] Random Background Image
-- [ ] Current Location and Weather
+- [x] Current Location and Weather
+- [ ] Styling
