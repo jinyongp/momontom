@@ -15,10 +15,10 @@
     const detail = weatherSection.querySelector('#weather-detail');
     const icon = weatherSection.querySelector('#icon-image');
     const temperature = weatherSection.querySelector('#temperature');
-    const avgTemp = temperature.querySelector('#avg-temp');
-    const maxTemp = temperature.querySelector('#max-temp');
-    const minTemp = temperature.querySelector('#min-temp');
-    const feelTemp = temperature.querySelector('#feel-temp');
+    const avgTemp = temperature.querySelector('#avg-temp span:last-child');
+    const maxTemp = temperature.querySelector('#max-temp span:last-child');
+    const minTemp = temperature.querySelector('#min-temp span:last-child');
+    const feelTemp = temperature.querySelector('#feel-temp span:last-child');
 
     cityName.textContent = city;
     detail.textContent = weather.description;

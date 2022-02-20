@@ -1,0 +1,49 @@
+#weather {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: white;
+}
+
+#row {
+  display: flex;
+  align-items: center;
+}
+
+#city-name {
+  font-size: 2rem;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+#weather-detail {
+  text-transform: capitalize;
+  display: block;
+  font-size: 1.2rem;
+}
+
+#temperature {
+  margin-top: 10px;
+  width: 90%;
+}
+
+#temperature li::after {
+  content: ' ℃';
+}
+
+#temperature li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 4px;
+}
+
+#temperature li span:first-child {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+}
+
+#temperature li span:last-child {
+  flex: 1;
+  text-align: end;
+}
