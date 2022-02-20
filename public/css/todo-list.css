@@ -1,0 +1,80 @@
+#todo-form {
+  margin: 1rem;
+  border-bottom: 1px solid white;
+}
+
+#todo-form input {
+  background-color: transparent;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+#todo-form input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#todo-list {
+  height: 15rem;
+  width: 20rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  color: white;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+#todo-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+#todo-list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+}
+
+#todo-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#todo-list:empty {
+  justify-content: center;
+  align-items: center;
+}
+
+#todo-list:empty::after {
+  content: 'What is your focus today?';
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#todo-list li {
+  margin: 3px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+#todo-list li:first-child {
+  margin-top: 0;
+}
+
+#todo-list li:last-child {
+  margin-bottom: 0;
+}
+
+#todo-list button {
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#todo-list button:hover {
+  color: greenyellow;
+}
